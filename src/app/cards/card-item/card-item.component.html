@@ -1,0 +1,31 @@
+<mat-card class="card-item">
+  <div class="row">
+    <div class="col-12 col-md-10">
+      <mat-card-header class="row" >
+        <mat-card-title>{{card.name || "-"}}</mat-card-title>
+        <mat-card-subtitle>{{card.title}}</mat-card-subtitle>
+      </mat-card-header>
+    </div>
+    <div class="col-12 col-md-2">
+      <button mat-icon-button color="primary" aria-label="EDIT" (click)="openUpdateCardModal(card)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </div>
+  <mat-card-content>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{card.phone}}</li>
+      <li class="list-group-item">
+        <span *ngIf="card.email">
+          {{card.email}}
+        </span>
+        <small class="text-warning" *ngIf="!card.email">E-Posta girilmemiş</small>
+      </li>
+      <li class="list-group-item">
+        <span *ngIf="card.address">
+          {{card.address}}
+        </span>
+        <small class="text-warning" *ngIf="!card.address">Adres girilmemiş</small>
+      </li>    </ul>
+  </mat-card-content>
+</mat-card>

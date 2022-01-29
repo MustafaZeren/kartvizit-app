@@ -1,0 +1,28 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.header-menu{
+  ul{
+  padding:0;
+  margin:0;
+  list-style: none;
+  display: flex;
+  li{
+    a{
+      color:whitesmoke;
+      padding:0 10px;
+      text-decoration: none;
+      font-size: 15px;
+      opacity: 0.75;
+      &:active{
+        opacity: 1;
+      };
+      &:hover{
+        opacity: 1;
+      };
+
+
+    }
+  }}
+}
